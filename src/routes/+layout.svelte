@@ -18,10 +18,10 @@
       <!-- logo - start  -->
       <a
         href='/'
-        class='hover:text-green-500 active:text-green-700 inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5'
+        class='hover:text-orange-500 active:text-orange-700 inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5'
         aria-label='logo'
       >
-        FoodHaus
+        DrinkHaus
       </a>
       <!-- logo - end -->
 
@@ -29,20 +29,20 @@
       <nav class='hidden lg:flex gap-12'>
         <a
           href='/categories'
-          class='text-gray-600 hover:text-green-500 active:text-green-700 text-lg font-semibold transition duration-100'
+          class='text-gray-600 hover:text-orange-500 active:text-orange-700 text-lg font-semibold transition duration-100'
         >
           Categories
         </a>
         <a
           href='/area'
-          class='text-gray-600 hover:text-green-500 active:text-green-700 text-lg font-semibold transition duration-100'
+          class='text-gray-600 hover:text-orange-500 active:text-orange-700 text-lg font-semibold transition duration-100'
         >
           Locations
         </a>
 
         <a
           href='/random'
-          class='text-gray-600 hover:text-green-500 active:text-green-700 text-lg font-semibold transition duration-100'
+          class='text-gray-600 hover:text-orange-500 active:text-orange-700 text-lg font-semibold transition duration-100'
         >
           Random
         </a>
@@ -52,14 +52,46 @@
 
       <!-- search end -->
       <!-- buttons - start -->
-
+      {#if navbarStatus}
       <button
         on:click={navbarToggle} 
         type='button'
-        class='z-20 inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-green-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2'
+        class='z-20 inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-orange-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2'
       >
+       <svg
+         xmlns='http://www.w3.org/2000/svg'
+         width='24'
+         height='24'
+         viewBox='0 0 24 24'
+         fill='currentColor'
+       >
+         <path d='M23 20.168l-8.185-8.187 8.185-8.174-2.832-2.807-8.182 8.179-8.176-8.179-2.81 2.81 8.186 8.196-8.186 8.184 2.81 2.81 8.203-8.192 8.18 8.192z' />
+       </svg>
+      
         Menu
       </button>
+    {:else}
+    <button
+        on:click={navbarToggle} 
+        type='button'
+        class='z-20 inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-orange-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2'
+      >
+     
+      <svg
+      xmlns='http://www.w3.org/2000/svg'
+      class='h-6 w-6'
+      viewBox='0 0 20 20'
+      fill='currentColor'>
+      <path
+        fill-rule='evenodd'
+        d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z'
+        clip-rule='evenodd'
+      />
+      </svg>
+      
+        Menu
+      </button>
+      {/if}
       <ul class={navbarStatus ? navbarOpen : navbarClosed}>
         <li>
           <div class='border-b'>
@@ -67,7 +99,7 @@
               on:click={navbarToggle} 
               href='/'
             >
-              <div class='flex justify-between text-black hover:text-green-500 active:text-green-600 cursor-pointer gap-2 py-4'>
+              <div class='flex justify-between text-black hover:text-orange-500 active:text-orange-600 cursor-pointer gap-2 py-4'>
                 <span class='md:text-lg font-semibold transition duration-100'>
                   Home
                 </span>
@@ -81,7 +113,7 @@
               on:click={navbarToggle} 
               href='/categories'
             >
-            <div class='flex justify-between text-black hover:text-green-500 active:text-green-600 cursor-pointer gap-2 py-4'>
+            <div class='flex justify-between text-black hover:text-orange-500 active:text-orange-600 cursor-pointer gap-2 py-4'>
               <span class='md:text-lg font-semibold transition duration-100'>
                   Categories
                 </span>
@@ -95,7 +127,7 @@
               on:click={navbarToggle} 
               href='/area'
             >
-            <div class='flex justify-between text-black hover:text-green-500 active:text-green-600 cursor-pointer gap-2 py-4'>
+            <div class='flex justify-between text-black hover:text-orange-500 active:text-orange-600 cursor-pointer gap-2 py-4'>
               <span class='md:text-lg font-semibold transition duration-100'>
                   Locations
                 </span>
@@ -109,7 +141,7 @@
               on:click={navbarToggle} 
               href='/random'
             >
-            <div class='flex justify-between text-black hover:text-green-500 active:text-green-600 cursor-pointer gap-2 py-4'>
+            <div class='flex justify-between text-black hover:text-orange-500 active:text-orange-600 cursor-pointer gap-2 py-4'>
               <span class='md:text-lg font-semibold transition duration-100'>
                   Random
                 </span>
