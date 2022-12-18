@@ -22,7 +22,7 @@
       {
         "strCategory":"Other \/ Unknown",
         "strCategoryThumb":"https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        "urlName":`other_\/_unknown`,
+        "urlName":"other_unknown",
         "by":"https://unsplash.com/@olivier_twwli"
       },
       {
@@ -52,7 +52,7 @@
       {
         "strCategory":"Punch \/ Party Drink",
         "strCategoryThumb":"https://images.unsplash.com/photo-1530077636681-452044839b73?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-        "urlName":"punch",
+        "urlName":"punch_party_drink",
         "by":"https://unsplash.com/@terasproductions"
       },
       {

@@ -2,7 +2,23 @@
   import { PUBLIC_DRINKDB_API } from "$env/static/public";
   export let data:any;
   
-  const categoryName = data.category
+  
+  let categoryName:string = data.category
+  let formattedCatName:string = categoryName.replace("_"," ").toLowerCase() .split(' ')
+    .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+    .join(' ');
+  if(categoryName == "other_unknown"){
+    categoryName = "other_\/_unknown"
+    formattedCatName = "Others / Unknown"
+  }else if(categoryName == "coffee_tea"){
+    categoryName = "coffee_\/_tea"
+    formattedCatName = "Coffees and Tea"
+  }else if(categoryName == "punch_party_drink"){
+    categoryName = "punch_\/_party_drink"
+    formattedCatName = "Punch and Party Drink"
+  }
+   
+  console.log(formattedCatName)
   async function fetchCategory(categoryName:string){
     const res = await fetch(`https://www.thecocktaildb.com/api/json/v2/${PUBLIC_DRINKDB_API}/filter.php?c=${categoryName}`)
     const categoryData = await res.json();
@@ -17,7 +33,7 @@
     <div class='bg-white py-6 sm:py-8 lg:py-12'>
       <div class='max-w-screen-2xl px-4 md:px-8 mx-auto'>
         <div class='flex justify-between items-end gap-4 mb-6'>
-          <h2 class='text-gray-800 text-2xl lg:text-3xl font-bold'>{categoryName}s</h2>
+          <h2 class='text-gray-800 text-2xl lg:text-3xl font-bold'>{formattedCatName}s</h2>
         </div>
         <div class='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 md:gap-x-6 gap-y-8'>
           {#each categoryData.drinks as drink}
