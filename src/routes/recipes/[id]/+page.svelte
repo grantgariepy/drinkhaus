@@ -7,6 +7,7 @@
     const res = await fetch(`https://www.thecocktaildb.com/api/json/v2/${PUBLIC_DRINKDB_API}/lookup.php?i=${recipeID}`)
     const recipeData = await res.json();
     return recipeData
+    
   }
 </script>
 

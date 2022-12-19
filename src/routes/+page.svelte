@@ -1,11 +1,5 @@
 <script lang="ts">
-  import { PUBLIC_DRINKDB_API } from "$env/static/public";
-  async function fetchRandomSelection(){
-    const res = await fetch(`https://www.thecocktaildb.com/api/json/v2/${PUBLIC_DRINKDB_API}/randomselection.php`)
-    const randomRecipes = await res.json();
-    // console.log(categoryData)
-    return randomRecipes
-  }
+  export let data:any;
 </script>
 
 <div class='bg-white pb-6 sm:pb-8 lg:pb-12'>
@@ -51,21 +45,8 @@
     </section>
   </div>
 </div>
-<!-- random drinks -->
+<!-- popular drinks -->
 <div>
-  
-  {#await fetchRandomSelection()}
-  <div class='bg-white py-6 sm:py-8 lg:py-12'>
-    <div class='max-w-screen-2xl px-4 md:px-8 mx-auto'>
-      <!-- text - start  -->
-      <div class='mb-10 md:mb-16'>
-        <h2 class='text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6'>
-          DrinkHaus Darlings
-        </h2>
-      </div>
-    </div>
-  </div>
-  {:then randomRecipes}
   <div class='bg-white py-6 sm:py-8 lg:py-12'>
     <div class='max-w-screen-2xl px-4 md:px-8 mx-auto'>
       <!-- text - start  -->
@@ -76,7 +57,7 @@
       </div>
       <!-- text - end  -->
       <div class='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
-        {#each randomRecipes.drinks.splice(0,8)  as drink}
+        {#each data.drinks.splice(0,8) as drink}
         <div>
           <a
             href={`/recipes/${drink.idDrink}`}
@@ -107,7 +88,7 @@
       </div>
     </div>
   </div>
-  {/await}
+  <!-- {/await} -->
 </div>
 <!-- call to action -->
 <div class='bg-white py-6 sm:py-8 lg:py-12'>
