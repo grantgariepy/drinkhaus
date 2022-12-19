@@ -18,7 +18,7 @@
     formattedCatName = "Punch and Party Drink"
   }
    
-  console.log(formattedCatName)
+  // console.log(formattedCatName)
   async function fetchCategory(categoryName:string){
     const res = await fetch(`https://www.thecocktaildb.com/api/json/v2/${PUBLIC_DRINKDB_API}/filter.php?c=${categoryName}`)
     const categoryData = await res.json();
@@ -39,7 +39,7 @@
           {#each categoryData.drinks as drink}
             <div>
               <a
-                href={`categories/${drink.idDrink}`}
+                href={`../recipes/${drink.idDrink}`}
                 class='group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3'
               >
                 <img
