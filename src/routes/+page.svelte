@@ -14,10 +14,10 @@
       <!-- content - start  -->
       <div class='xl:w-5/12 flex flex-col justify-center items-center lg:items-start sm:text-center lg:text-left lg:py-12 xl:py-24'>
         <h1 class='text-black-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12'>
-          Welcome to FoodHaus.
+          Welcome to DrinkHaus.
         </h1>
         <p class='lg:w-4/5 text-gray-500 xl:text-lg leading-relaxed mb-8 md:mb-12'>
-          So many recipes to choose from! You can search by catergory, ingredients, or
+          So many drinks to choose from! You can search by catergory, ingredients, or
           geographical area! Or if you're feeling lucky you can get a random recipe!
         </p>
         <form
@@ -121,7 +121,7 @@
           Let us choose for you!
         </h2>
         <p class='max-w-md text-gray-400 mb-8'>
-          Click the button below and you will be taken to a random recipe in our catalogue!
+          Click the button below and you will be taken to a random drink in our catalogue!
         </p>
         <div class='mt-auto'>
           <a
