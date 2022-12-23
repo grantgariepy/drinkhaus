@@ -98,7 +98,7 @@
         </div>
         {/each}
         <!-- product end  -->
+      </div>
     </div>
   </div>
-</div>
 </div>

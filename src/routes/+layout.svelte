@@ -34,10 +34,10 @@
           Categories
         </a>
         <a
-          href='/area'
+          href='/ingredients'
           class='text-gray-600 hover:text-orange-500 active:text-orange-700 text-lg font-semibold transition duration-100'
         >
-          Locations
+          Ingredients
         </a>
 
         <a
@@ -125,11 +125,11 @@
           <div class='border-b'>
             <a
               on:click={navbarToggle} 
-              href='/area'
+              href='/ingredients'
             >
             <div class='flex justify-between text-black hover:text-orange-500 active:text-orange-600 cursor-pointer gap-2 py-4'>
               <span class='md:text-lg font-semibold transition duration-100'>
-                  Locations
+                  Ingredients
                 </span>
               </div>
             </a>
