@@ -32,12 +32,14 @@
 				id="searchInput"
 				class="w-full flex-1 bg-gray-50 text-gray-800 placeholder-gray-500 border focus:ring ring-orange-300 rounded outline-none transition duration-100 px-3 py-2"
 			/>
-			<div class="grid gap-x-4 md:gap-x-6 gap-y-8">
-				<ul>
+			<div class="">
+				<ul class="list-none">
 					{#each $filtered as item}
-						<li>
-							{item}
-						</li>
+						<div class="">
+							<li>
+								<a class="text-2xl" href="ingredients/{item}">{item}</a>
+							</li>
+						</div>
 					{/each}
 				</ul>
 			</div>
